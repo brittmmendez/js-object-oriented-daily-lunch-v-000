@@ -2,7 +2,7 @@ let store = {customers : [], meals: [], deliveries: [], employers: []};
 
 let customerId = 0 ;
 class Customer {
-  constructor(name, employer = {}){
+  constructor(name, employer){
     this.name = name ;
     this.employerId=employer.id
     this.id = ++customerId ;
@@ -57,7 +57,7 @@ class Meal {
 
 let deliveryId = 0 ;
 class Delivery{
-  constructor(meal={}, customer={}) {
+  constructor(meal, customer) {
     this.mealId = meal.id;
     this.customerId = customer.id;
     this.id = ++deliveryId;
